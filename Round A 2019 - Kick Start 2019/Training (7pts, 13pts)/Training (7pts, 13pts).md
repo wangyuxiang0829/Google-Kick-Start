@@ -1,5 +1,3 @@
-# Round A 2019 - Kick Start 2019
-
 ## Training (7pts, 13pts)
 
 ### Problem
@@ -75,6 +73,8 @@ As we always need the sum of a contiguous subarray, we can pre compute the prefi
 So, the overall complexity of this approach is $\mathrm { O } ( \mathbf { N } )$.
 
 
+
+### Code
 
 ```go
 package main
