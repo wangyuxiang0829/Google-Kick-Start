@@ -14,19 +14,19 @@ func input(N *int, P *int) []int {
 	return S
 }
 
-func sliceCopy(source, target []int)  {
+func sliceCopy(source, target []int) {
 	for index, value := range source {
 		target[index] = value
 	}
 }
 
-func merge(S []int, q int)  {
-	L := make([]int, q + 1)
-	R := make([]int, len(S) - q - 1)
+func merge(S []int, q int) {
+	L := make([]int, q+1)
+	R := make([]int, len(S)-q-1)
 
-	sliceCopy(S[:q + 1], L)
+	sliceCopy(S[:q+1], L)
 
-	sliceCopy(S[q + 1:], R)
+	sliceCopy(S[q+1:], R)
 
 	i, j, k := 0, 0, 0
 
@@ -55,11 +55,11 @@ func merge(S []int, q int)  {
 	}
 }
 
-func mergeSort(S []int)  {
+func mergeSort(S []int) {
 	if len(S) > 1 {
 		q := (len(S) - 1) / 2
-		mergeSort(S[:q + 1])
-		mergeSort(S[q + 1:])
+		mergeSort(S[:q+1])
+		mergeSort(S[q+1:])
 		merge(S, q)
 	}
 }
@@ -74,11 +74,11 @@ func output() (time int) {
 	for i := 0; i < P; i++ {
 		sum += S[i]
 	}
-	time = P * S[0] - sum
+	time = P*S[0] - sum
 
-	for i := 1; i < len(S) - P + 1; i++ {
-		sum = sum + S[i + P - 1] - S[i - 1]
-		tmp := P * S[i] - sum
+	for i := 1; i < len(S)-P+1; i++ {
+		sum = sum + S[i+P-1] - S[i-1]
+		tmp := P*S[i] - sum
 		if tmp < time {
 			time = tmp
 		}
@@ -87,7 +87,7 @@ func output() (time int) {
 	return
 }
 
-func main()  {
+func main() {
 	var T int
 	_, _ = fmt.Scan(&T)
 

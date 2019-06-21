@@ -7,7 +7,7 @@ func input(N, R, C, Sr, Sc *int) []byte {
 
 	inst := make([]byte, *N)
 
-	for i:= 0; i < len(inst); i++ {
+	for i := 0; i < len(inst); i++ {
 		_, _ = fmt.Scanf("%c", &inst[i])
 	}
 
@@ -25,41 +25,45 @@ func output() (r, c int) {
 	}
 
 	r, c = Sr, Sc
-	grid[r - 1][c - 1] = true
+	grid[r-1][c-1] = true
 
 	for _, direction := range inst {
 		switch direction {
-		case 'E': {
-			for c++; grid[r - 1][c - 1] == true; {
-				c++
+		case 'E':
+			{
+				for c++; grid[r-1][c-1] == true; {
+					c++
+				}
+				grid[r-1][c-1] = true
 			}
-			grid[r - 1][c - 1] = true
-		}
-		case 'W': {
-			for c--; grid[r - 1][c - 1] == true; {
-				c--
+		case 'W':
+			{
+				for c--; grid[r-1][c-1] == true; {
+					c--
+				}
+				grid[r-1][c-1] = true
 			}
-			grid[r - 1][c - 1] = true
-		}
-		case 'N': {
-			for r--; grid[r - 1][c - 1] == true; {
-				r--
+		case 'N':
+			{
+				for r--; grid[r-1][c-1] == true; {
+					r--
+				}
+				grid[r-1][c-1] = true
 			}
-			grid[r - 1][c - 1] = true
-		}
-		case 'S': {
-			for r++; grid[r - 1][c - 1] == true; {
-				r++;
+		case 'S':
+			{
+				for r++; grid[r-1][c-1] == true; {
+					r++
+				}
+				grid[r-1][c-1] = true
 			}
-			grid[r - 1][c - 1] = true
-		}
 		}
 	}
 
 	return
 }
 
-func main()  {
+func main() {
 	var T int
 	_, _ = fmt.Scan(&T)
 
