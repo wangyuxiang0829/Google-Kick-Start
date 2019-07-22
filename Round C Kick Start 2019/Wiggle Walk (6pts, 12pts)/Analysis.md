@@ -1,10 +1,10 @@
-### Analysis
+## Analysis
 
-#### Test set 1 (Visible)
+### Test set 1 (Visible)
 
 Approaching the problem naively, one might try to simply simulate what has been mentioned in the problem statement i.e. keep on moving the robot in the specified direction till it reaches an un-visited square. The running time of this approach is going be $T ( n ) = \theta \left( n ^ { 2 } \right)$ in the worst case, which although good enough for test set 1.
 
-#### Test set 2 (Hidden)
+### Test set 2 (Hidden)
 
 The problem with the above approach is that it visits a lot of already visited squares which in worst case will be all the previously visited squares (Consider the input where you are given alternating `E` and `W` throughout). If we somehow get to the destination square for each instruction faster, we might be able to reduce the running time.
 

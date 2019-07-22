@@ -1,6 +1,4 @@
-## Training (7pts, 13pts)
-
-### Problem
+## Problem
 
 As the football coach at your local school, you have been tasked with picking a team of exactly **P** students to represent your school. There are **N** students for you to pick from. The i-th student has a *skill rating* **Si**, which is a positive integer indicating how skilled they are.
 

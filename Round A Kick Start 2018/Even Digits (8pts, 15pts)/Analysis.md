@@ -1,4 +1,4 @@
-## Even Digits: Analysis
+## Analysis
 
 To make our discussion easier, let us define a **beautiful** integer as an integer which has only even digits in its decimal representation.
 

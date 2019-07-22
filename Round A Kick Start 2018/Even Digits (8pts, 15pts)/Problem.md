@@ -1,4 +1,4 @@
-### Problem
+## Problem
 
 Supervin has a unique calculator. This calculator only has a display, a plus button, and a minus button. Currently, the integer **N** is displayed on the calculator display.
 
