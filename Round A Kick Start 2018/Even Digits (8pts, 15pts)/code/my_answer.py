@@ -1,8 +1,8 @@
-def beautify(num):
+def beautify(N):
     digits = []
-    while num != 0:
-        digits.append(num % 10)
-        num = num // 10
+    while N != 0:
+        digits.append(N % 10)
+        N = N // 10
     for digit in digits:
         if digit % 2 != 0:
             return False
